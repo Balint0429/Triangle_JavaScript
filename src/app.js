@@ -7,22 +7,22 @@
 * Github: https://github.com/Balint0429/
 * Licenc: GNU GPL
 */
-var baseInput=document.querySelector("#base");
-var heightInput=document.querySelector("#height");
-var areaInput=document.querySelector("#base");
-var calcButton=document.querySelector("#base");
+var baseInput = document.querySelector('#base');
+var heightInput = document.querySelector('#height');
+var areaInput = document.querySelector('#area');
+var calcButton = document.querySelector('#calcButton');
 
-calcButton.addEventListener("clicl",()=>{
+calcButton.addEventListener('click', () => {
     inputCon();
 });
 
-function inputCon(){
+function inputCon() {
     let base = Number(baseInput.value);
     let height = Number(heightInput.value);
-    let area = calcArea(base,height);
-    areaInput.value = area +"cm2";
+    let area = calcTriangleArea(base, height);
+    areaInput.value = area + " cm²";
 }
 
-function calcArea(base, height){
-    return base * height /2;
+function calcTriangleArea(base, height) {
+    return base * height / 2;
 }
